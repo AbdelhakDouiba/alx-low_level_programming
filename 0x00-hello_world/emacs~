@@ -1,3 +1,0 @@
-(c-set-offset 'substatement-open 0)
-(setq c-default-style "linux"
-              c-basic-offset 0)
