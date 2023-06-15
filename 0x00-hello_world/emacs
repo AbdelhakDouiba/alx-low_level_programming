@@ -1,0 +1,3 @@
+(c-set-offset 'substatement-open 0)
+(setq c-default-style "whitesmith"
+              c-basic-offset 0)
