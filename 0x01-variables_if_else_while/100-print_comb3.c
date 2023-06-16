@@ -8,28 +8,23 @@
 
 int main(void)
 {
-	int value = 48, tmp = 49, val, dvalue, dtmp;
+	int value = 48, tmp;
 
 	while (value < 57)
 	{
+		tmp = value + 1;
 		while (tmp < 58)
 		{
 			putchar(value);
 
 			putchar(tmp);
 
-			dvalue = putchar(value);
-			dtmp = putchar(tmp);
-
-			val = (dvalue * 10) + dtmp;
-
-			if (val != 89)
+			if (value != 56)
 			{
 				putchar(',');
 
 				putchar(' ');
 			}
-			tmp = 48;
 
 			tmp++;
 		}
