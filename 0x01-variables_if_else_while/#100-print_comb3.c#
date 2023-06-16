@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+/**
+ *main - prints all possible different combinations of two digits.
+ *
+ *Return: 0 if the program success
+ */
+
+int main(void)
+{
+	int value_0 = 0, value_9 = 1, val;
+
+	while (value_0 < 9)
+	{
+		while(value_9 < 10)
+		{
+			putchar(value + '0');
+			putchar(value_9 + '0');
+			val = (value
