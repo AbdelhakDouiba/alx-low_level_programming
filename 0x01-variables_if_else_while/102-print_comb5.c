@@ -14,7 +14,7 @@ int main(void)
 		digit_1 = 48;
 		while (digit_1 < 57)
 		{
-			digit_2 =48;
+			digit_2 = 48;
 			while (digit_2 < 58)
 			{
 				digit_3 = digit_1 + 1;
@@ -26,7 +26,7 @@ int main(void)
 					putchar(digit_2);
 					putchar(digit_3);
 
-					if ( digit_0 != 57 && digit_1 != 56)
+					if (digit_0 != 57 && digit_1 != 56)
 					{
 						putchar(',');
 						putchar(' ');
