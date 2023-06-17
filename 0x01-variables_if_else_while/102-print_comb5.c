@@ -7,38 +7,28 @@
  */
 int main(void)
 {
-	int digit_0 = 48, digit_1, digit_2, digit_3;
+	int part_1 = 0, part_2;
 
-	while (digit_0 < 58)
+	while (part_1 < 99)
 	{
-		digit_1 = 48;
-		while (digit_1 < 57)
+		part_2 = part_1 + 1;
+		while (part_2 < 100)
 		{
-			digit_2 = digit_0;
-			while (digit_2 < 58)
+			putchar((part_1 / 10) + '0');
+			putchar((part_1 % 10) + '0');
+			putchar(' ');
+			putchar((part_2 / 10) + '0');
+			putchar((part_2 % 10) + '0');
+
+			if (part_1 != 98)
 			{
-				digit_3 = digit_1 + 1;
-				while (digit_3 < 58)
-				{
-					putchar(digit_0);
-					putchar(digit_1);
-					putchar(' ');
-					putchar(digit_2);
-					putchar(digit_3);
-					if (digit_0 != 57 || digit_1 != 56)
-					{
-						putchar(',');
-						putchar(' ');
-					}
-					digit_3++;
-				}
-				digit_2++;
+				putchar(',');
+				putchar(' ');
 			}
-			digit_1++;
+			part_2++;
 		}
-		digit_0++;
+		part_1++;
 	}
 	putchar('\n');
 	return (0);
-
 }
