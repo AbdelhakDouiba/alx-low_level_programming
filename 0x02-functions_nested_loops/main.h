@@ -1,6 +1,6 @@
 
 /**
- *this is the prototype for the function _putchar
- *it can print one character every time you run it
- */
+*this header file conatian all the 0x02-functions_nested_loops/ functions
+*/
 int _putchar(char);
+void print_alphabet(void);
