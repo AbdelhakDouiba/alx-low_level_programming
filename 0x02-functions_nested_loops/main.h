@@ -15,3 +15,7 @@ void times_table(void);
 int add(int, int);
 void print_to_98(int);
 void print_times_table(int);
+void _putchar100(int);
+void _putchar10(int);
+void _putcharco(void);
+void _putcharsp(void);
