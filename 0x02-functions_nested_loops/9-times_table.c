@@ -31,6 +31,7 @@ void times_table(void)
 			if ((j > 0) && (times < 10))
 			{
 				_putchar(' ');
+				_putchar(' ');
 			}
 		j++;
 		}
