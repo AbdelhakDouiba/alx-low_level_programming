@@ -30,7 +30,7 @@ void times_table(void)
 			}
 			if (times < 10 && j < 9)
 			{
-				times = (j+1) * i;
+				times = (j + 1) * i;
 				if (times < 10)
 				{
 					_putchar(' ');
