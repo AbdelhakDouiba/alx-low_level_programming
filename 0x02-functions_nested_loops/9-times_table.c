@@ -28,10 +28,13 @@ void times_table(void)
 				_putchar(',');
 				_putchar(' ');
 			}
-			if ((j > 0) && (times < 10))
+			if (times < 10 && j < 9)
 			{
-				_putchar(' ');
-				_putchar(' ');
+				times = (j+1) * i;
+				if (times < 10)
+				{
+					_putchar(' ');
+				}
 			}
 		j++;
 		}
