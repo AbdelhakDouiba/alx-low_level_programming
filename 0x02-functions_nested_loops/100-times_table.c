@@ -8,8 +8,9 @@ void print_times_table(int n)
 {
 	if (n >= 0 && n <= 15)
 	{
-		int i, j, times;
-		for (i = 0; i <= n; i++)
+		int i, j, z, times;
+
+		for (i = 0 ; i <= n; i++)
 		{
 			for (j = 0; j <= n; j++)
 			{
@@ -21,9 +22,8 @@ void print_times_table(int n)
 				else if (times < 10 && j != 0)
 				{
 					_putchar(',');
-					_putchar(' ');
-					_putchar(' ');
-					_putchar(' ');
+					for (z = 0 ; z < 3 ; z++)
+						_putchar(' ');
 					_putchar(times + '0');
 				}
 				else if (times >= 10 && times < 100)
