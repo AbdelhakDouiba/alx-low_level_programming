@@ -10,13 +10,13 @@ int main(void)
 {
 	long int i, tmp, fib_1 = 0, fib_2 = 1;
 
-	for (i = 1 ; i < 50 ; i++)
+	for (i = 1 ; i <= 50 ; i++)
 	{
 		tmp = fib_2;
 		fib_2 = fib_1 + fib_2;
 		fib_1 = tmp;
 		printf("%ld", fib_2);
-		if (i != 49)
+		if (i != 50)
 		{
 			printf(", ");
 		}
