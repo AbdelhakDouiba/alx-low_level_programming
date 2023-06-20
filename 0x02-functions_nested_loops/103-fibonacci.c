@@ -13,7 +13,7 @@ int main(void)
 		tmp = fib_2;
 		fib_2 = fib_1 + fib_2;
 		fib_1 = tmp;
-		if (fib_2 < 4000000)
+		if (fib_2 < 4000000 && (fib_2 % 2) == 0)
 		{
 			sum = sum + fib_2;
 		}
