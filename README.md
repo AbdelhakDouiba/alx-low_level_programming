@@ -1,1 +1,1 @@
-this README for 0x00-hello_world project
+this README for alx low level programing projects

@@ -12,13 +12,22 @@ int main(void)
 
 	for (i = 1 ; i <= 98 ; i++)
 	{
-		tmp = fib_2;
-		fib_2 = fib_1 + fib_2;
-		fib_1 = tmp;
-		printf("%ld", fib_2);
-		if (i != 98)
+		if (i <= 91)
 		{
-			printf(", ");
+			tmp = fib_2;
+			fib_2 = fib_1 + fib_2;
+			fib_1 = tmp;
+			printf("%lu, ", fib_2);
+		}
+		else
+		{
+			unsigned long int a, b;
+			tmp = fib_2;
+			a = (fib_1 + fib_2) / 10000000000;
+			b = (fib_1 + fib_2) % 10000000000;
+			fib_2 = fib_1 + fib_2;
+			fib_1 = tmp;
+			printf("%lu%lu, ", a, b);
 		}
 	}
 	printf("\n");
