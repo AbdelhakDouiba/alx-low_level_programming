@@ -15,7 +15,7 @@ int main(void)
 		j = 2;
 		while (j < i)
 		{
-			if ( i % j == 0)
+			if (i % j == 0)
 			{
 				k = 1;
 				break;
@@ -24,9 +24,9 @@ int main(void)
 		}
 		if (k == 0 || i == 2)
 		{
-			if ( NUMBER % i == 0)
+			if (NUMBER % i == 0)
 			{
-				if ( i >= largest)
+				if (i >= largest)
 				{
 					largest = i;
 				}
