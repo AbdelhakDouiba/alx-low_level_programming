@@ -1,30 +1,37 @@
 #include "main.h"
 /**
-*print_triangle - prints a triangle, followed by a new line
-*@size:function parameter, conatain an integer value
+*print_square - prints a square, followed by a new line.
+*@size: function parameter: contain an integer value
 *
 */
-void print_triangle(int size)
+void print_square(int size)
 {
-	int i = 0, j;
-
-	while (i < size)
+	if (size > 0)
 	{
-		size = size - i;
-		j = size - 1;
-		while (j >= 0)
+		int i = 0, j, k;
+
+		while (i < size)
 		{
-			if (j < (size - 1))
+			k = size - 1 - i;
+			j = 0;
+			while (j < size)
 			{
-				_putchar(' ');
+				if (j >= k)
+				{
+					_putchar('#');
+				}
+				else if (j < k)
+				{
+					_putchar(' ');
+				}
+			j++;
 			}
-			else if (j == (size - 1))
-			{
-				_putchar('#');
-			}
-			j--;
+			_putchar('\n');
+			i++;
 		}
-		i++;
 	}
+	else
+	{
 	_putchar('\n');
+	}
 }
