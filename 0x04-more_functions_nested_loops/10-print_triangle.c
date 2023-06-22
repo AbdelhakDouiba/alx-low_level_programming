@@ -1,10 +1,10 @@
 #include "main.h"
 /**
-*print_square - prints a square, followed by a new line.
+*print_square - prints a triangle, followed by a new line.
 *@size: function parameter: contain an integer value
 *
 */
-void print_square(int size)
+void print_triangle(int size)
 {
 	if (size > 0)
 	{
