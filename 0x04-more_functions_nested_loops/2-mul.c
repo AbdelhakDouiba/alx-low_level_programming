@@ -1,8 +1,8 @@
 #include "main.h"
 /**
 *mul - multiplies two integers.
-@a: function parameter
-@b: function parameter
+*@a: the first operand, will conatain an integer value
+*@b: the second operand, will conatain an integer value
 *
 *Return: the multiplication of the two integers
 */
