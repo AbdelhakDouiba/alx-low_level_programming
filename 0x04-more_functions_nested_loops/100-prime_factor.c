@@ -1,5 +1,4 @@
 #include <stdio.h>
-#define NUMBER 612852475143
 /**
 *main - finds and prints the largest prime factor of the number 612852475143,
 *       followed by a new line.
@@ -7,7 +6,7 @@
 */
 int main(void)
 {
-	unsigned long int i = 3, j, k = 0, largest = 1;
+	unsigned long int i = 3, j, k = 0, largest = 1, NUMBER = 612852475143;
 
 	while (i < NUMBER)
 	{
