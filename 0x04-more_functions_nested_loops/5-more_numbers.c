@@ -10,7 +10,7 @@ void more_numbers(void)
 	while (i < 10)
 	{
 		digit = 0;
-		while (digit < 14)
+		while (digit <= 14)
 		{
 			if (digit >= 10)
 			{
@@ -24,5 +24,6 @@ void more_numbers(void)
 			digit++;
 		}
 		i++;
+		_putchar('\n');
 	}
 }
