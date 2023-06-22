@@ -7,7 +7,7 @@
 */
 int main(void)
 {
-	unsigned long int i = 2, j, k, largest = 2;
+	unsigned long int i = 3, j, k = 0, largest = 1;
 
 	while (i < NUMBER)
 	{
@@ -22,7 +22,7 @@ int main(void)
 			}
 			j++;
 		}
-		if (k != 0)
+		if (k == 0 || i == 2)
 		{
 			if ( NUMBER % i == 0)
 			{
