@@ -1,6 +1,6 @@
 #include "main.h"
 /**
-*print_square - prints a triangle, followed by a new line.
+*print_triangle - prints a triangle, followed by a new line.
 *@size: function parameter: contain an integer value
 *
 */
