@@ -35,7 +35,7 @@ int main(void)
 		i += 2;
 
 	}
-	if (NUMBER > largest)
+	if (largest < NUMBER)
 		largest = NUMBER;
 
 	printf("%lu\n", largest);
