@@ -4,7 +4,7 @@
 *@n: contain an integer value
 *
 */
-int print_number(int n)
+void print_number(int n)
 {
 	int i = n;
 
