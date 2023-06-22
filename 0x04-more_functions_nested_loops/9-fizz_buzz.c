@@ -1,7 +1,7 @@
 #include <stdio.h>
 /**
 *main - print Fizz if the number multiple of 3, Buzz if the numer is multiple
-*	of 5, FizzBuzz if the number multiple of both 3 and 5, otherwise 
+*	of 5, FizzBuzz if the number multiple of both 3 and 5, otherwise
 *	print the number.
 *
 *Return: 0 if the program success
@@ -27,7 +27,7 @@ int main(void)
 		}
 		else
 		{
-			printf("%d", number); 
+			printf("%d", number);
 		}
 		if (number != 100)
 		{
