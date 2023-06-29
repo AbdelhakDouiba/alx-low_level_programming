@@ -32,7 +32,7 @@ int _atoi(char *str)
 		{
 			break;
 		}
-		k++
+		k++;
 	}
 	if (moins % 2 != 0)
 	{
