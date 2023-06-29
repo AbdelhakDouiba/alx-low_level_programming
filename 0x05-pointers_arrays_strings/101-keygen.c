@@ -9,15 +9,15 @@
 int main(void)
 {
 	int i, n;
-	char password[100];
+	char password[14];
 
 	srand(time(NULL));
 
-	for(i = 0; i < 100; i++)
+	for(i = 0; i < 14; i++)
 	{
 		n = rand() % 93 + 33;
 		password[i] = (char)n;
-		printf("%s\n", password);
+		printf("%c", password);
 	}
 	return 0;
 }
