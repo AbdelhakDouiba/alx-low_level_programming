@@ -21,7 +21,7 @@ char *_strncat(char *dest, char *src, int n)
 	}
 	if(n >= lensrc)
 	{
-		return ('\0');
+		return (&src[lensrc]);
 	}
 	else
 	{
