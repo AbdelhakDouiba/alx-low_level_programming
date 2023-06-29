@@ -19,7 +19,7 @@ char *_strncat(char *dest, char *src, int n)
 	for (lensrc = 0; src[lensrc] != '\0'; lensrc++)
 	{
 	}
-	if(n >= lensrc)
+	if (n >= lendest)
 	{
 		return (&src[lensrc]);
 	}
