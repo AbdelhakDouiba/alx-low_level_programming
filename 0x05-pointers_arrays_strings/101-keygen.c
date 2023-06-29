@@ -17,7 +17,7 @@ int main(void)
 	{
 		n = rand() % 93 + 33;
 		password[i] = (char)n;
-		putchar(password[i]);
+		printf("%s\n", password);
 	}
 	return 0;
 }
