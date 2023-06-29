@@ -8,7 +8,7 @@
 
 int _atoi(char *str)
 {
-	int len, k = 0, j = 0, rem = 0, moins = 0, med;
+	int len, moins = 0, j = 0, k = 0, rem = 0, med;
 
 	for (len = 0; str[len] != '\0'; len++)
 	{
@@ -25,18 +25,18 @@ int _atoi(char *str)
 				}
 				j++;
 			}
-		}
-		med = str[k] - '0';
-		rem = rem * 10 + med;
-		if (str[k + 1] < 48 || str[k + 1] > 57)
-		{
-			break;
+			med = str[k] - '0';
+			rem = rem * 10 + med;
+			if (str[k + 1] < 48 || str[k + 1] > 57)
+			{
+				break;
+			}
 		}
 		k++;
 	}
 	if (moins % 2 != 0)
 	{
-		rem *= (-1);
+		rem = rem * (-1);
 	}
 	return (rem);
 }
