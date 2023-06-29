@@ -19,17 +19,11 @@ char *_strncat(char *dest, char *src, int n)
 	for (lensrc = 0; src[lensrc] != '\0'; lensrc++)
 	{
 	}
-	if (n >= lendest)
+	while (i < n && src[i] != '\0')
 	{
-		return (&src[lensrc]);
+		dest[lendest + i] = src[i];
+		i++;
 	}
-	else
-	{
-		while (i < n)
-		{
-			dest[lendest + i] = src[i];
-			i++;
-		}
-		return (dest);
-	}
+	dest[lendest + i] = '\0';
+	return (dest);
 }
