@@ -8,7 +8,7 @@
 
 int _atoi(char *str)
 {
-	int len, moins = 0, j = 0, k = 0, rem = 0, med;
+	unsigned int len, moins = 0, j = 0, k = 0, rem = 0, med;
 
 	for (len = 0; str[len] != '\0'; len++)
 	{
