@@ -30,16 +30,9 @@ char *cap_string(char *str)
 		i++;
 	}
 	i = 0;
-	if (str[i] == ' ' || str[i] == ',' || str[i] == ';' ||
-		str[i] == '.' || str[i] == '!' || str[i] == '?' ||
-		str[i] == '"' || str[i] == '(' || str[i] == ')' ||
-		str[i] == '{' || str[i] == '}' || str[i] == '\n' ||
-		str[i] == '\t')
+	if (str[i] >= 97 && str[i] <= 122)
 	{
-		if (str[i] >= 97 && str[i] <= 122)
-		{
-			str[i] -= 32;
-		}
+		str[i] -= 32;
 	}
 	return (str);
 }
