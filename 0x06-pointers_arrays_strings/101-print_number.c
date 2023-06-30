@@ -14,14 +14,21 @@ void print_number(int n)
 		_putchar('-');
 		n = -n;
 	}
-	while ((n / 10) != 0 || n > 0)
+	if (n == 0)
 	{
-		i = (i * 10) + (n % 10);
-		n /= 10;
+		_putchar(n + '0');
 	}
-	while ((i / 10) != 0 || i > 0)
+	else
 	{
-		_putchar((i % 10) + '0');
-		i /= 10;
+		while ((n / 10) != 0 || n > 0)
+		{
+			i = (i * 10) + (n % 10);
+			n /= 10;
+		}
+		while ((i / 10) != 0 || i > 0)
+		{
+			_putchar((i % 10) + '0');
+			i /= 10;
+		}
 	}
 }
