@@ -7,33 +7,19 @@
 */
 char *leet(char *str)
 {
-	int i = 0, len = 0;
+	int i = 0, j = 0;
+	char r[] = "aAeEoOtTlL", w[] = "4433007711";
 
-	while (str[len] != '\0')
+	while (str[i] != '\0')
 	{
-		len++;
-	}
-	while (i < len)
-	{
-		if (str[i] == 'a' || str[i] == 'A')
+		j = 0;
+		while(r[j] != '\0')
 		{
-			str[i] = 52;
-		}
-		if (str[i] == 'e' || str[i] == 'E')
-		{
-			str[i] = 51;
-		}
-		if (str[i] == 'o' || str[i] == 'O')
-		{
-			str[i] = 48;
-		}
-		if (str[i] == 't' || str[i] == 'T')
-		{
-			str[i] = 55;
-		}
-		if (str[i] == 'l' || str[i] == 'L')
-		{
-			str[i] = 49;
+			if (str[i] == r[j])
+			{
+				str[i] = w[j];
+			}
+			j++;
 		}
 		i++;
 	}
