@@ -22,9 +22,13 @@ char *cap_string(char *str)
 			str[i] == '{' || str[i] == '}' || str[i] == '\n' ||
 			str[i] == '\t')
 		{
-			if (str[i + 1] >= 97 && str[i + 1] <= 122)
+			if (str[i] == '\t')
 			{
-				str[i + 1] -= 32;
+				str[i] = ' ';
+				if (str[i + 1] >= 97 && str[i + 1] <= 122)
+				{
+					str[i + 1] -= 32;
+				}
 			}
 		}
 		i++;
