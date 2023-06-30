@@ -7,12 +7,12 @@
 
 void print_number(int n)
 {
-	unsigned int i = 0, count = 0, j, k = 0;
+	unsigned int i = 0, count = 0, j, k = 0, num;
 
 	if (n < 0)
 	{
 		_putchar('-');
-		n = -n;
+		num = -n;
 	}
 	if (n == 0)
 	{
@@ -20,15 +20,15 @@ void print_number(int n)
 	}
 	else
 	{
-		while ((n / 10) != 0 || n > 0)
+		while ((num / 10) != 0 || num > 0)
 		{
 			j = i;
-			i = (i * 10) + (n % 10);
-			if (n % 10 == 0 && i == j)
+			i = (i * 10) + (num % 10);
+			if (num % 10 == 0 && i == j)
 			{
 				count++;
 			}
-			n /= 10;
+			num /= 10;
 		}
 		while ((i / 10) != 0 || i > 0)
 		{
