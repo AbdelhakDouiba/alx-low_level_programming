@@ -3,7 +3,7 @@
 /**
 *_strpbrk - searches a string for any of a set of bytes.
 *@s: function parameter
-*@accpet: function parameter
+*@accept: function parameter
 *
 *Return: string for any of a set of bytes
 */
