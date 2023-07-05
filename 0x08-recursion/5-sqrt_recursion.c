@@ -8,7 +8,7 @@ int _is_sqrt(int i, int num);
 */
 int _sqrt_recursion(int n)
 {
-	return (_is_sqrt(n, n));
+	return (_is_sqrt(1, n));
 }
 
 /**
@@ -31,6 +31,6 @@ int _is_sqrt(int i, int num)
 	}
 	else
 	{
-		return (_is_sqrt((i - 1), num));
+		return (_is_sqrt((i + 1), num));
 	}
 }
