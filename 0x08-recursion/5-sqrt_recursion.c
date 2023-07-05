@@ -1,3 +1,4 @@
+int _is_sqrt(int i, int num);
 
 /**
 *_sqrt_recursion - returns the natural square root of a number.
