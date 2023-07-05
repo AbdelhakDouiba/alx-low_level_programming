@@ -1,3 +1,4 @@
+int is_p(char *a, char *b);
 
 /**
 *is_palindrome - returns 1 if a string is a palindrome and 0 if not.
@@ -7,17 +8,18 @@
 */
 int is_palindrome(char *s)
 {
+	int len = 0, i = 0;
 	char *str;
 
-	while(s != '\0')
+	while(s[len] != '\0')
 	{
-		s++;
 		len++;
 	}
-	while(len >= 0)
+	while((len-1) >= 0)
 	{
-		str[len] = s[len];
+		str[i] = s[len];
 		len--;
+		i++;
 	}
 	return is_p(str, s);
 }
@@ -27,7 +29,7 @@ int is_p(char *a, char *b)
 	{
 		return 0;
 	}
-	else if (a != '\0' && b != '\0' && a == b)
+	else if (*a != '\0' && *b != '\0' && *a == *b)
 	{
 		a++;
 		b++;
