@@ -21,7 +21,7 @@ int _sqrt_recursion(int n)
 */
 int _is_sqrt(int i, int num)
 {
-	if (num < 0)
+	if (num < 0 || (i * i) > num)
 	{
 		return (-1);
 	}
