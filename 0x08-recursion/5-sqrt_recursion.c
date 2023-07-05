@@ -7,26 +7,29 @@
 */
 int _sqrt_recursion(int n)
 {
-	int i = n;
-	if (n < 0)
+	return (_is_sqrt(n, n));
+}
+
+/**
+*_is_sqrt - calculate the square root
+*@i: function paramter
+*@num: function parameter
+*
+*Return: the square root value, otherwise -1 the number have not any square
+*	 root
+*/
+int _is_sqrt(int i, int num)
+{
+	if (i < 0)
 	{
 		return (-1);
 	}
-	else if (n == 0)
+	if ((i * i) == num)
 	{
-		return (0);
+		return (i);
 	}
 	else
 	{
-		if((i * i) == n)
-		{
-		return (i);
-		}
-		else
-		{
-			return (_sqrt_recursion(n-1));
-		}
-		return (-1);
+		return (_is_sqrt((i - 1), num));
 	}
 }
-
