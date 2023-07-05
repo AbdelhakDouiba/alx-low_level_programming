@@ -9,3 +9,4 @@ int _is_sqrt(int i, int num);
 int is_prime_number(int n);
 int _is_prime(int i, int num);
 int is_palindrome(char *s);
+int is_p(char *a, int i, int j);

@@ -1,39 +1,39 @@
-int is_p(char *a, char *b);
+int is_p(char *a, int i, int j);
 
 /**
 *is_palindrome - returns 1 if a string is a palindrome and 0 if not.
-*s: function parameter
+*@s: function parameter
 *
 *Return: 1 if a string is a palindrome and 0 if not.
 */
 int is_palindrome(char *s)
 {
-	int len = 0, i = 0;
-	char *str;
+	int len = 0;
 
-	while(s[len] != '\0')
+	while (s[len] != '\0')
 	{
 		len++;
 	}
-	while((len-1) >= 0)
-	{
-		str[i] = s[len];
-		len--;
-		i++;
-	}
-	return is_p(str, s);
+	return (is_p(s, len - 1, 0));
 }
-int is_p(char *a, char *b)
+
+/**
+*is_p - returns 1 if a string is a palindrome and 0 if not
+*@a: function parameter
+*@i: function parameter
+*@j: function parameter
+*
+*Return: 1 if a string is a palindrome and 0 if not.
+*/
+int is_p(char *a, int i, int  j)
 {
-	if( *a != *b)
+	if (a[i] != a[j])
 	{
-		return 0;
+		return (0);
 	}
-	else if (*a != '\0' && *b != '\0' && *a == *b)
+	else if (i >= j)
 	{
-		a++;
-		b++;
-		is_p(a, b);
+		return (1);
 	}
-	return 1;
+	return (is_p(a, i - 1, j + 1));
 }
