@@ -32,5 +32,5 @@ int _is_prime(int i, int num)
 	{
 		return (0);
 	}
-	_is_prime(++i, num);
+	return (_is_prime(++i, num);
 }
