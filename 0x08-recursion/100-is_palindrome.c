@@ -40,7 +40,7 @@ int is_palindrome(char *s)
 */
 int is_p(char *a, int i, int  j)
 {
-	if (i >= j)
+	if (i <= j)
 	{
 		return (1);
 	}
