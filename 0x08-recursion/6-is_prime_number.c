@@ -8,17 +8,29 @@ int _is_prime(int i, int num);
 */
 int is_prime_number(int n)
 {
-	return _is_prime(2, n);
-}
-int _is_prime(int i, int num)
-{
-	if (num % i != 0)
+	if (i <= 1)
 	{
 		return (0);
 	}
-	else if (i == num)
+	return _is_prime(2, n);
+}
+/**
+*is_prime - returns 1 if the input integer is a prime
+*		   number, otherwise return 0.
+*@num: function parameter
+*@i: function paramter
+*
+*Return: 1 if the input integer is a prime number, otherwise 0
+*/
+int _is_prime(int i, int num)
+{
+	if (i == num)
 	{
 		return (1);
+	}
+	else if (num % i == 0)
+	{
+		return (0);
 	}
 	_is_prime(++i, num);
 }
