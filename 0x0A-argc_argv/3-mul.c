@@ -7,7 +7,7 @@ int _atoi(char *str);
 *@argv: arguments vector
 *@argc: arguments count
 *
-*return: 1 and calculate the resulte if the passed arguments are two
+*Return: 1 and calculate the resulte if the passed arguments are two
 *		0 otherwise
 */
 
