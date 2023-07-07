@@ -12,13 +12,14 @@
 */
 int main(int argc, char *argv[])
 {
-	int j = 0, number = atoi(argv[1]), minimum;
+	int j = 0, number, minimum;
 
 	if (argc != 2)
 	{
 		printf("Error\n");
 		return (1);
 	}
+	number = atoi(argv[1]);
 	while (argv[1][j] != '\0')
 	{
 		if (argv[1][0] == '-')
