@@ -12,19 +12,28 @@
 */
 int main(int argc, char *argv[])
 {
-	int number = atoi(argv[1]), minimum;
-	
+	int j = 0, number = atoi(argv[1]), minimum;
+
 	if (argc != 2)
 	{
 		printf("Error\n");
 		return (1);
 	}
-	if (number < 0)
+	while (argv[1][j] != '\0')
 	{
-		printf("0\n");
-		return (0);
+		if (argv[1][0] == '-')
+		{
+			j++;
+			continue;
+		}
+		if (argv[1][j] < 48 || argv[1][j] > 57)
+		{
+			printf("Error\n");
+			return (1);
+		}
+		j++;
 	}
-	if (number == 0)
+	if (number <= 0)
 	{
 		printf("0\n");
 		return (0);
