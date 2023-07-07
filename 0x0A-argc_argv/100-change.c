@@ -1,5 +1,4 @@
 #include "main.h"
-int min_centes(int n);
 /**
 *main - prints the minimum number of coins to make change for
 *	an amount of money.
@@ -14,20 +13,25 @@ int min_centes(int n);
 int main(int argc, char *argv[])
 {
 	int number = atoi(argv[1]), minimum;
-
-	if (argc != 2 || number < 0)
+	
+	if (argc != 2)
 	{
 		printf("Error\n");
 		return (1);
 	}
+	if (number < 0)
+	{
+		printf("0\n");
+		return (0);
+	}
 	if (number == 0)
 	{
 		printf("0\n");
-		return (EXIT_SUCCESS);
+		return (0);
 	}
 	minimum = min_centes(number);
 	printf("%d\n", minimum);
-	return (EXIT_SUCCESS);
+	return (0);
 }
 /**
 *min_centes - return minimum number of coins
