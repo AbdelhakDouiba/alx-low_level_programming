@@ -1,14 +1,19 @@
 #include <stdio.h>
 /**
-*main- prints its name, followed by a new line.
+*main- prints all arguments it receives, followed by a new line.
 *@argv: arguments vector
 *@argc: arguments count
+*@i: an intger counter
 *
 *Return: 0 if the program success
 */
 int main(int argc, char *argv[])
 {
-	(void)argc;
-	printf("%s\n", argv[0]);
+	int i = 0;
+
+	while (i < argc)
+	{
+		printf("%s\n", argv[i]);
+	}
 	return (0);
 }

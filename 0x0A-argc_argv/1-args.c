@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
-*main- prints prints the number of arguments passed into it
+*main - prints the number of arguments passed into it
 *	followed by a new line.
 *@argv: arguments vector
 *@argc: arguments count
