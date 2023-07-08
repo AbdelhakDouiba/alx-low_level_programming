@@ -27,7 +27,15 @@ int main(void)
 		tem = b;
 		tem1 = b1;
 		b = a + b;
-		b1 = a1 + b1;
+		if (a1 + b1 > 999999999)
+		{
+			b += (a1 + b1) / 1000000000;
+			b1 = (a1 + b1) % 1000000000;
+		}
+		else
+		{
+			b1 = (a1 + b1);
+		}
 		a = tem;
 		a1 = tem1;
 		printf("%lu", b);
