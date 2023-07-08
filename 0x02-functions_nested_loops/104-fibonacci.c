@@ -22,7 +22,7 @@ int main(void)
 	a1 = fib_1 % 1000000000;
 	b = fib_2 / 1000000000;
 	b1 = fib_2 % 1000000000;
-	for (i; i <= 98; i++)
+	for (i = 93; i <= 98; i++)
 	{
 		tem = b;
 		tem1 = b1;
