@@ -18,12 +18,12 @@ char *create_array(unsigned int size, char c)
 	{
 		return (NULL);
 	}
-	p = (char *)malloc(98 * sizeof(int));
+	p = (char *)malloc(size * sizeof(int));
 	if (p == NULL)
 	{
 		return (NULL);
 	}
-	for(i = 0; i < 98; i++)
+	for (i = 0; i < size; i++)
 	{
 		p[i] = c;
 	}
