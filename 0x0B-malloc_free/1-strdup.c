@@ -6,11 +6,11 @@
 *@str: function paramter
 *
 *Return:  a pointer to a new string which is a duplicate of the string str
-	   NULL if insufficient memory was available.
+*	   NULL if insufficient memory was available.
 */
 char *_strdup(char *str)
 {
-	unsigned long int i;
+	unsigned long int i, elements;
 	char *p;
 
 	if (str == NULL)
@@ -18,7 +18,8 @@ char *_strdup(char *str)
 		return (NULL);
 	}
 	p = (char *)malloc(sizeof(str));
-	for (i = 0; i < sizeof(str); i++)
+	elements = sizeof(str)/sizeof(str[0]);
+	for (i = 0; i < elements; i++)
 	{
 		p[i] = str[i];
 	}
