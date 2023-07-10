@@ -14,7 +14,19 @@ char *str_concat(char *s1, char *s2)
 	unsigned long i, j, lens1, lens2;
 	char *ptr;
 
-	ptr = (char *)malloc(sizeof(s1) + sizeof(s2) - sizeof(char));
+	if (s1 == NULL && s2 == NULL)
+	{
+		return (NULL);
+	}
+	else if (s1 == NULL)
+	{
+		return (s2);
+	}
+	else if (s2 == NULL)
+	{
+		return (s1);
+	}
+	ptr = (char *)malloc(sizeof(s1) + sizeof(s2) - 1);
 	if (ptr == NULL)
 	{
 		return (NULL);
