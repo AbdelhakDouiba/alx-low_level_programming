@@ -11,32 +11,32 @@
 */
 char *str_concat(char *s1, char *s2)
 {
-	unsigned long lens1, lens2;
+	unsigned long i, j, lens1 = 0, lens2 = 0;
 	char *ptr;
 
+	if (s1 == NULL)
+	{
+		s1 = "";
+	}
+	if (s2 == NULL)
+	{
+		s2 = "";
+	}
 	lens1 = strlen(s1);
 	lens2 = strlen(s2);
-	if (s1 == NULL && s2 == NULL)
-	{
-		ptr = (char *)malloc(1);
-	}
-	else if (s1 == NULL)
-	{
-		ptr = (char *)malloc(lens2);
-	}
-	else if (s2 == NULL)
-	{
-		ptr = (char *)malloc(lens1);
-	}
-	else
-	{
-		ptr = (char *)malloc(lens1 + lens2 - 1);
-	}
+	ptr = (char *)malloc(lens1 + lens2 + 1);
 	if (ptr == NULL)
 	{
 		return (NULL);
 	}
-	ptr = strcat(s1, s2);
-	return ptr;
+	for (i = 0; i < lens1; i++)
+	{
+		ptr[i] = s1[i];
+	}
+	i = lens1;
+	for (j = 0; j <= lens2; j++)
+	{
+		ptr[i++] = s2[j];
+	}
 	return (ptr);
 }
