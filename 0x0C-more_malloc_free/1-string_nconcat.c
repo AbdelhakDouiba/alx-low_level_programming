@@ -15,10 +15,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	unsigned int f = n, lens1, lens2, i, j;
 	char *ptr;
 
-	if (n == 0)
-	{
-		return (NULL);
-	}
 	if (s1 == NULL)
 	{
 		s1 = "";
