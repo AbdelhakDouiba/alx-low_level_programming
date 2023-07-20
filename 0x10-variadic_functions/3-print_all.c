@@ -12,37 +12,38 @@ void print_all(const char * const format, ...)
 	char *ptr;
 	va_list var;
 
-	count = get_count(format);
-	va_start(var, format);
-	while (format[i] != '\0' && count != 0)
-	{
-		flag = 1;
-		switch (format[i])
-		{
-			case 'i':
-				printf("%d", va_arg(var, int));
-				break;
-			case 'f':
-				printf("%f", va_arg(var, double));
-				break;
-			case 'c':
-				printf("%c", va_arg(var, int));
-				break;
-			case 's':
-				ptr = va_arg(var, char *);
-				if (ptr == NULL)
-				{
-					printf("(nil)");
+	if (format != NULL)
+	{count = get_count(format);
+		va_start(var, format);
+		while (format[i] != '\0' && count != 0)
+		{flag = 1;
+			switch (format[i])
+			{
+				case 'i':
+					printf("%d", va_arg(var, int));
 					break;
-				}
-				printf("%s", ptr);
-				break;
-			default:
-				flag = 0;
-				break;
-		}
+				case 'f':
+					printf("%f", va_arg(var, double));
+					break;
+				case 'c':
+					printf("%c", va_arg(var, int));
+					break;
+				case 's':
+					ptr = va_arg(var, char *);
+					if (ptr == NULL)
+					{
+						printf("(nil)");
+						break;
+					}
+					printf("%s", ptr);
+					break;
+				default:
+					flag = 0;
+					break;
+			}
 			print_separator(&count, flag);
-		i++;
+			i++;
+		}
 	}
 	printf("\n");
 	va_end(var);
@@ -57,13 +58,16 @@ void print_all(const char * const format, ...)
 int get_count(const char * const form)
 {
 	int i = 0, count = 0;
+	bool b;
 
 	while (form[i] != '\0')
 	{
-		if (form[i] == 'i' || form[i] == 'f' || form[i] == 's' ||
-			form[i] == 'c')
+		b = (form[i] == 'i' || form[i] == 'f' || form[i] == 's' ||
+			form[i] == 'c');
+		switch (b)
 		{
-			count++;
+			case (true):
+				count++;
 		}
 		i++;
 	}
