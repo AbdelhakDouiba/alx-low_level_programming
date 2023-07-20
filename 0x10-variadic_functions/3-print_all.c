@@ -14,7 +14,7 @@ void print_all(const char * const format, ...)
 
 	count = get_count(format);
 	va_start(var, format);
-	while (format[i] != '\0')
+	while (format[i] != '\0' && count != 0)
 	{
 		flag = 1;
 		switch (format[i])
@@ -79,6 +79,7 @@ int get_count(const char * const form)
 void print_separator(int *a, int b)
 {
 	bool z = ((*a - 1) != 0 && b == 1);
+
 	switch (z)
 	{
 		case (true):
