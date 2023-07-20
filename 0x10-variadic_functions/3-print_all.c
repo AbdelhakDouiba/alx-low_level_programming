@@ -78,9 +78,11 @@ int get_count(const char * const form)
 */
 void print_separator(int *a, int b)
 {
-	if ((*a - 1) != 0 && b == 1)
+	bool z = ((*a - 1) != 0 && b == 1);
+	switch (z)
 	{
-		printf(", ");
-		*a = *a - 1;
+		case (true):
+			printf(", ");
+			*a = *a - 1;
 	}
 }
