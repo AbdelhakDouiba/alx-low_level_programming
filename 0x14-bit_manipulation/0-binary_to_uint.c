@@ -17,14 +17,16 @@ unsigned int binary_to_uint(const char *b)
 		return (0);
 	}
 	for (len = 0; b[len] != '\0'; len++)
+	{
+	}
 	len--;
 	while (len >= 0)
 	{
-		if ((b[len] - 48) != 0 && (b[len] - 48) != 1)
+		if (b[len] != '0' && b[len] != '1')
 		{
 			return (0);
 		}
-		dec += (b[len] - 48) * (_power(2, i));
+		dec += (b[len] - '0') * (_power(2, i));
 		i++;
 		len--;
 	}
@@ -46,7 +48,7 @@ int _power(int a, int n)
 	{
 		return (1);
 	}
-	while (n - 1)
+	while (n > 1)
 	{
 		pow *= a;
 		n--;
