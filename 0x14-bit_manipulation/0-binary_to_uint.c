@@ -11,13 +11,14 @@ unsigned int binary_to_uint(const char *b)
 {
 	unsigned int dec = 0, i = 0;
 	int len;
+
 	if (b == NULL)
 	{
 		return (0);
 	}
-	for (len = 0; b[len] != '\0'; len++){}
+	for (len = 0; b[len] != '\0'; len++)
 	len--;
-	while(len >= 0)
+	while (len >= 0)
 	{
 		if ((b[len] - 48) != 0 && (b[len] - 48) != 1)
 		{
@@ -40,11 +41,12 @@ unsigned int binary_to_uint(const char *b)
 int _power(int a, int n)
 {
 	int pow = a;
+
 	if (n == 0)
 	{
 		return (1);
 	}
-	while(n - 1)
+	while (n - 1)
 	{
 		pow *= a;
 		n--;
