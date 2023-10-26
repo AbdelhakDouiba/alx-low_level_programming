@@ -8,14 +8,11 @@
 int get_endianness(void)
 {
 	unsigned int number = 1;
-	unsigned int *ptr = (unsigned char *)&num;
+	unsigned int *ptr = (unsigned char *)&number;
 
 	if (*ptr == 1)
 	{
 		return (1);
 	}
-	else
-	{
-		return (0);
-	}
+	return (0);
 }
