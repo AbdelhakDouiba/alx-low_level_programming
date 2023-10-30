@@ -30,6 +30,7 @@ int main(int argc, char *argv[])
 		if (read_val == -1)
 			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n",
 			 argv[1]), exit(98);
+		buff[1024] = '\0';
 		if (read_val == 0)
 			break;
 		write_val = write(fd_dest, buff, read_val);
