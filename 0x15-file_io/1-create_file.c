@@ -35,7 +35,7 @@ int create_file(const char *filename, char *text_content)
 *_strlen - calculate the length of a string
 *@str: string
 *
-*return: the lenght of a string.
+*Return: the lenght of a string.
 */
 int _strlen(char *str)
 {
