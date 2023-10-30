@@ -9,7 +9,7 @@
 */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	int fd = open(filename, O_CREAT | O_RDWR), i = 0;
+	int fd = open(filename, O_CREAT | O_RDWR);
 	char *buff;
 	ssize_t n;
 
@@ -18,17 +18,23 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 	}
 	buff = (char *)malloc(letters);
+	if (buff == NULL)
+	{
+		free(buff);
+		return (0);
+	}
 	n = read(fd, buff, letters);
 	if (n == -1)
 	{
+		free(buff);
 		return (0);
 	}
-	while (buff[i])
+	n = write(STDOUT_FILENO, buff, n);
+	if (n == -1)
 	{
-		_putchar(buff[i]);
-		i++;
+		free(buff);
+		return (0);
 	}
-	_putchar('\n');
 	close(fd);
 	free(buff);
 	return (n);
