@@ -60,15 +60,22 @@ void insert(shash_table_t *ht, shash_node_t *node, unsigned long int i)
 			free(node->value);
 			free(node);
 			node = tmp;
-			if (strcmp(tmp->sprev->key, node->key) < 0 &&
-				strcmp(tmp->snext->key, node->key) > 0)
+			if (tmp->sprev != NULL && tmp->snext != NULL &&
+			    strcmp(tmp->sprev->key, tmp->key) <= 0 &&
+			    strcmp(tmp->snext->key, tmp->key) >= 0)
 			{
 				return;
 			}
 			else
 			{
-				node->sprev->snext = node->snext;
-				node->snext->sprev = node->sprev;
+				if (node->sprev != NULL)
+					node->sprev->snext = node->snext;
+				if (node->snext != NULL)
+					node->snext->sprev = node->sprev;
+				if (node->sprev == NULL)
+					ht->shead = node->snext;
+				if (node->snext == NULL)
+					ht->stail = node->sprev;
 				sort(ht, node);
 				return;
 			}
