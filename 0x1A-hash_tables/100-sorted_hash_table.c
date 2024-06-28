@@ -73,6 +73,7 @@ void insert(shash_table_t *ht, shash_node_t *node, unsigned long int i)
 				return;
 			}
 		}
+		tmp = tmp->next;
 	}
 	node->next = ht->array[i];
 	ht->array[i] = node;
