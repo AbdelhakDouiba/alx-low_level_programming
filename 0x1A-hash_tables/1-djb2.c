@@ -2,7 +2,7 @@
 
 /**
 *hash_djb2 - the djb2 algorithm.
-*@atr - input string
+*@str - input string
 *
 *Return: The hash code for input
 */
