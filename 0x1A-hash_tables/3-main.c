@@ -24,6 +24,7 @@ int main(void)
 	hash_table_set(ht, "serafins", "yt");
 	hash_table_set(ht, "stylist", "ss)");
 	hash_table_set(ht, "subgenera", "yy");
+	hash_table_set(ht, "betty", "great");
 	for (i = 0; i < 1024; i++)
 	{
 		if (ht->array[i] != NULL)
@@ -32,7 +33,7 @@ int main(void)
 			tmp = ht->array[i];
 			while (tmp != NULL)
 			{
-				printf("%s -> ", tmp->key);
+				printf("%s: [%s] -> ", tmp->key, tmp->value);
 				tmp = tmp->next;
 			}
 			printf("NULL\n");
