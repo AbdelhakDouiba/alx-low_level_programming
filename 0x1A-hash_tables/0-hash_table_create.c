@@ -13,7 +13,7 @@ hash_table_t *hash_table_create(unsigned long int size)
 	unsigned long int i;
 
 	if (size <= 0)
-		return NULL
+		return NULL;
 	hashtable = (hash_table_t *)malloc(sizeof(hash_table_t));
 	if (hashtable == NULL)
 		return (NULL);
