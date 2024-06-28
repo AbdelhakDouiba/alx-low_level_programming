@@ -48,6 +48,18 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 
 void insert(shash_node_t *htarray, shash_node_t *node)
 {
+	shash_node_t *tmp = htarray;
+
+	while (tmp != NULL)
+	{
+		if (strcmp(tmp->key, node->key) == 0)
+		{
+			tmp->value = node->value;
+			free(node);
+			node = tmp;
+			return;
+		}
+	}
 	node->next = htarray;
 	htarray = node;
 }
