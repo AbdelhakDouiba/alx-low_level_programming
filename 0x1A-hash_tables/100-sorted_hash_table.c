@@ -55,6 +55,8 @@ void insert(shash_node_t *htarray, shash_node_t *node)
 /**
 *sort - sort insertion for nodes
 *@ht: hashtable
+*@node: node to sorted
+*
 */
 void sort(shash_table_t *ht, shash_node_t *node)
 {
