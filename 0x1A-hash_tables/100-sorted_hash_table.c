@@ -35,33 +35,48 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 	node->snext = NULL;
 	node->sprev = NULL;
 	index = key_index((unsigned char *)key, ht->size);
-	insert(ht->array[index], node);
-	sort(ht, node);
+	insert(ht, node, index);
 	return (1);
 }
 /**
 *insert - sorted insertion
-*@htarray: the selected hashtable map region
+*@ht: the selected hashtable map
 *@node: node
+*@i: index
 *
 */
 
-void insert(shash_node_t *htarray, shash_node_t *node)
+void insert(shash_table_t *ht, shash_node_t *node, unsigned long int i)
 {
-	shash_node_t *tmp = htarray;
+	shash_node_t *tmp = ht->array[i];
 
 	while (tmp != NULL)
 	{
 		if (strcmp(tmp->key, node->key) == 0)
 		{
-			tmp->value = node->value;
+			free(tmp->value);
+			tmp->value = _strdup(node->value);
+			free(node->key);
+			free(node->value);
 			free(node);
 			node = tmp;
-			return;
+			if (strcmp(tmp->sprev->key, node->key) < 0 &&
+				strcmp(tmp->snext->key, node->key) > 0)
+			{
+				return;
+			}
+			else
+			{
+				node->sprev->snext = node->snext;
+				node->snext->sprev = node->sprev;
+				sort(ht, node);
+				return;
+			}
 		}
 	}
-	node->next = htarray;
-	htarray = node;
+	node->next = ht->array[i];
+	ht->array[i] = node;
+	sort(ht, node);
 }
 
 /**
@@ -83,7 +98,6 @@ void sort(shash_table_t *ht, shash_node_t *node)
 	}
 	else
 	{
-		
 		while (tmp != NULL && strcmp(tmp->key, node->key) < 0)
 			tmp = tmp->snext;
 		if (tmp == NULL)
